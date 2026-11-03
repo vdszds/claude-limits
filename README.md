@@ -17,14 +17,24 @@ Unofficial. Not affiliated with or endorsed by Anthropic.
 - **Ultra accounts without a session limit** show their weekly usage in the menu bar instead.
 - Collapse accounts you don't need to see. Refreshes every 5 minutes (2–15 is configurable), when the dropdown opens, after the Mac wakes, and just after a limit resets.
 
-## Build
+## Install
+
+Download **[Claude-Limits.dmg](https://github.com/vdszds/claude-limits/releases/latest/download/Claude-Limits.dmg)**, open it and drag Claude Limits to Applications. Or use Homebrew:
+
+```sh
+brew install --cask vdszds/tap/claude-limits
+```
+
+Requires macOS 14 or later, on Apple silicon or Intel. The app is signed and notarized by Apple.
+
+## Build from source
 
 ```sh
 ./build.sh           # builds build/Claude Limits.app
 ./build.sh install   # copies it to /Applications and launches it
 ```
 
-Requires macOS 14 or later and Xcode's Swift toolchain.
+Requires Xcode's Swift toolchain.
 
 ## How it works
 
@@ -40,6 +50,8 @@ Requires macOS 14 or later and Xcode's Swift toolchain.
 ## Development
 
 `Limits --snapshot <dir>` renders the dropdown and the menu bar bars with sample data to PNGs, for design review. `Limits --demo` runs the menu bar item with six sample accounts. The binary is at `.build/release/Limits` after `./build.sh`.
+
+`./release.sh 1.2.0` publishes a release: it builds for both architectures, signs, notarizes, uploads `Claude-Limits.dmg` to GitHub Releases and updates the Homebrew cask. The comment at the top of the script lists what it needs.
 
 ## License
 
