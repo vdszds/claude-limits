@@ -153,7 +153,7 @@ final class StatusController: NSObject {
 final class DropdownPanel: NSPanel {
     /// Room around the card inside the window: a small gap under the menu bar and space for the card's shadow.
     static let cardInset = NSEdgeInsets(top: 5, left: 28, bottom: 44, right: 28)
-    private static let cornerRadius: CGFloat = 16
+    static let cornerRadius: CGFloat = 16
 
     var onCancel: (() -> Void)?
     var onClickOutsideCard: (() -> Void)?
