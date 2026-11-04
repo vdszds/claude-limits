@@ -1,3 +1,5 @@
+<img src="docs/logo.png" alt="Claude Limits logo" width="96">
+
 # Claude Limits
 
 Usage limits for all your Claude accounts, in the Mac menu bar.
